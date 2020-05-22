@@ -62,7 +62,7 @@ public class Solution {
   }
 
   /** 
-   * Initializes the adjacency list that will stores tree. 
+   * Initializes the adjacency list that stores tree. 
    * Values at index '0' are not applied in the solution,
    * so that each index corresponds to a node value.
    */
@@ -75,7 +75,7 @@ public class Solution {
   }
 
   /** 
-   * Assign an initial value of '1' to each node, since each node is a subtree itself. 
+   * Assigns an initial value of '1' to each node, since each node is a subtree itself. 
    * Values at index '0' are not applied in the solution,
    * so that each index corresponds to a node value.
    */
