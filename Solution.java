@@ -62,6 +62,7 @@ public class Solution {
 
   /** 
    * Initializes the adjacency list that will stores tree. 
+   * Values at index '0' are not applied in the solution.
    */
   @SuppressWarnings("unchecked")
   private static void initialize_nodesAndEdges(int numberOfNodes) {
@@ -73,6 +74,7 @@ public class Solution {
 
   /** 
    * Assign an initial value of '1' to each node, since each node is a subtree itself. 
+   * Values at index '0' are not applied in the solution.
    */
   private static void initialize_totalNodes_inSubtrees(int numberOfNodes) {
     totalNodes_inSubtrees = new int[numberOfNodes + 1];
