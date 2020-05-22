@@ -31,7 +31,7 @@ public class Solution {
   /**
    * Finds the maxium number of subtrees that contain an even number of nodes.
    *
-   * The root node of the tree has a vlaue '1' and the root node of each subtree has a value that
+   * The root node of the tree has a value of '1' and the root node of each subtree has a value that
    * is less than the value of each node in its subtree.
    *
    * @return An integer, representing the number of edges to be cut, in order to have maxium number
