@@ -62,7 +62,7 @@ public class Solution {
   }
 
   /** 
-   * Initializes the adjacency list that stores tree. 
+   * Initializes the adjacency list that stores the tree. 
    * Values at index '0' are not applied in the solution,
    * so that each index corresponds to a node value.
    */
