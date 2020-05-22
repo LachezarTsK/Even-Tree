@@ -1,7 +1,4 @@
-package main.evenTree;
-
 import java.util.Scanner;
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -32,13 +29,13 @@ public class Solution {
   }
 
   /**
-   * FinDs the maxium number of subtrees that contain even number of * nodes.
+   * FinDs the maxium number of subtrees that contain an even number of nodes.
    *
-   * <p>The root node of the tree has a vlaue '1' and the root node of each subtree has a value that
-   * is less than the value of each node in this subtree.
+   * The root node of the tree has a vlaue '1' and the root node of each subtree has a value that
+   * is less than the value of each node in its subtree.
    *
    * @return An integer, representing the number of edges to be cut, in order to have maxium number
-   *     of subtrees that contain even number * of * nodes.
+   *         of subtrees that contain even number of nodes.
    */
   private static int find_maxNumberOfEvenSubtrees(int numberOfNodes) {
 
@@ -50,9 +47,9 @@ public class Solution {
       // Start counting from leaves.
       for (int j = 0; j < edges.size(); j++) {
 
-        // Count only nodes with less value than the current node.
+        // Count only nodes with less value than the current node, i.e. only nodes in subtrees.
         if (edges.get(j) > i) {
-          totalNodes_inSubtrees[i] = totalNodes_inSubtrees[i] + totalNodes_inSubtrees[edges.get(j)];
+          totalNodes_inSubtrees[i] += totalNodes_inSubtrees[edges.get(j)];
         }
       }
       if (totalNodes_inSubtrees[i] % 2 == 0) {
@@ -63,7 +60,9 @@ public class Solution {
     return totalEdgesToCut_for_maxNumberOfEvenSubtrees;
   }
 
-  /** Initializes the adjacency list that will stores tree. */
+  /** 
+   * Initializes the adjacency list that will stores tree. 
+   */
   @SuppressWarnings("unchecked")
   private static void initialize_nodesAndEdges(int numberOfNodes) {
     nodesAndEdges = new List[numberOfNodes + 1];
@@ -72,7 +71,9 @@ public class Solution {
     }
   }
 
-  /** Assign an initial value of '1' to each node, since each node is a subtree itself. */
+  /** 
+   * Assign an initial value of '1' to each node, since each node is a subtree itself. 
+   */
   private static void initialize_totalNodes_inSubtrees(int numberOfNodes) {
     totalNodes_inSubtrees = new int[numberOfNodes + 1];
     for (int i = 1; i < numberOfNodes + 1; i++) {
